@@ -26,3 +26,14 @@ Confirm that you see "Hello Spark" in the output.
 
 
 If all the test passed locally and "Hello Spark" was in the output than your environment is set up and ready for a TW Data Engineering coding interview.
+
+
+## Reading Data with Spark
+In the reading data folder there are four objects that show how to read CSV, Parquet or text data, and how to read from S3.  
+
+Note that in order to run reading from S3, you will have to create your own s3 bucket, upload data to it, and configure environment variables and pass in arguments to your spark-submit command.
+
+
+
+Read the following link to get more data on how to set your code to read from S3
+https://spark.apache.org/docs/2.3.0/cloud-integration.html
