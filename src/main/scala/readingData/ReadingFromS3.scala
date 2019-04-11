@@ -12,7 +12,6 @@ object ReadingFromS3 {
 
 
     val spark = SparkSession.builder.appName("Read Text File from S3 with Spark").getOrCreate()
-    spark.sparkContext.hadoopConfiguration.set("fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem")
     spark.sparkContext.hadoopConfiguration.set("fs.s3a.access.key", AWS_ACCESS_KEY)
     spark.sparkContext.hadoopConfiguration.set("fs.s3a.secret.key", AWS_SECRET_KEY)
 
