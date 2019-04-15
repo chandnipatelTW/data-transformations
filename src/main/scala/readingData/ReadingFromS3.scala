@@ -7,7 +7,7 @@ object ReadingFromS3 {
 
     val AWS_ACCESS_KEY = System.getenv("AWS_ACCESS_KEY")
     val AWS_SECRET_KEY = System.getenv("AWS_SECRET_KEY")
-    val AWS_BUCKET_NAME =  if (!args.isEmpty) args(0) else "reading-data-from-s3-test-bucket"
+    val AWS_BUCKET_NAME =  if (args.length!=0) args(0) else "reading-data-from-s3-test-bucket"
     val AWS_ASSET_NAME = if (args.length >= 2) args(1) else "/big.txt"
 
 

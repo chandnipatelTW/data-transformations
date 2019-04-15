@@ -6,7 +6,7 @@ object ReadingCSV {
   def main(args: Array[String]): Unit = {
     val spark = SparkSession.builder.appName("Read CSV Data with Spark App").getOrCreate()
 
-    val filepath = if(args.isEmpty) "src/test/resources/samplecsv.csv" else args(0)
+    val filepath = if(args.length==0) "src/test/resources/samplecsv.csv" else args(0)
 
     val weatherDF = spark
       .read
