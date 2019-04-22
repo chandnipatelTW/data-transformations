@@ -17,7 +17,7 @@ Please make sure you have the following installed
 Please confirm that all of the test pass.
 
 ## Setup for local run with spark-submit
-After running sbt package run from the root directory
+After running sbt assembly run from the root directory
 ```
 spark-submit target/scala-2.12/data-transformations-assembly-0.1.jar 
 ```
@@ -34,19 +34,19 @@ Run the following commands to execute the solutions to the reading data exercise
 
 ###Reading Text Files
 ```
-spark-submit --master local --class readingData.ReadingText target/scala-2.12/data-transformations_2.12-0.1.jar 
+spark-submit --master local --class readingData.ReadingText target/scala-2.12/data-transformations-assembly-0.1.jar 
 
 ```
 
 ###Reading CSV Files
 ```
-spark-submit --master local --class readingData.ReadingCSV target/scala-2.12/data-transformations_2.12-0.1.jar 
+spark-submit --master local --class readingData.ReadingCSV target/scala-2.12/data-transformations-assembly-0.1.jar 
 
 ```
 
 ###Reading Parquet Files
 ```
-spark-submit --master local --class readingData.ReadingParquet target/scala-2.12/data-transformations_2.12-0.1.jar 
+spark-submit --master local --class readingData.ReadingParquet target/scala-2.12/data-transformations-assembly-0.1.jar 
 
 ```
 
@@ -55,7 +55,7 @@ Note that in order to run reading from S3, you will have to create your own s3 b
 ```
 export AWS_ACCESS_KEY=MYACCESSEKEY
 export AWS_SECRET_KEY=myseceretkey293kfelkjweilejrlwk3
-spark-submit --master local --class readingData.ReadingFromS3 target/scala-2.12/data-transformations_2.12-0.1.jar "mybucketname" "/filename" 
+spark-submit --master local --class readingData.ReadingFromS3 target/scala-2.12/data-transformations-assembly-0.1.jar "mybucketname" "/filename" 
 
 ```
 Read the following link to get more data on how to set your code to read from S3
