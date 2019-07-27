@@ -102,3 +102,11 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# ignore the data directory for local data 
+data
+
+# ignore some stuff added by vscode plugins
+.bloop
+.metals
+.scalafmt.conf
+project/.bloop
